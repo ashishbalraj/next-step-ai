@@ -1,0 +1,101 @@
+.header {
+  background: linear-gradient(90deg, #689bdd, #eaeeee);
+  padding: 1rem 3rem;
+  border-bottom: 1px solid rgba(153, 145, 145, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.leftSide {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #b9c5e2;
+  text-decoration: none;
+  height: 50px;
+  width: 38px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.link {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #004bec;
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: #acbcdd;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.rightSide {
+  flex-grow: 1;
+  min-width: 190px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.authButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.signinButton,
+.signupButton {
+  padding: 0.65rem 1.2rem;
+  border-radius: 10px;
+  background: white;
+  color: #5980d3;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #bfdbfe;
+  transition: all 0.3s ease;
+}
+
+.signinButton:hover,
+.signupButton:hover {
+  background: #2563eb;
+  color: white;
+}

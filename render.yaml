@@ -2,9 +2,9 @@ services:
   - type: web
     name: nextstep-ai-backend
     runtime: python
-    pythonVersion: 3.13.10
+    pythonVersion: 3.12.15
     rootDir: backend
 
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --prefer-binary -r requirements.txt
 
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT

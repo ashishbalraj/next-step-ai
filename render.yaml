@@ -2,7 +2,7 @@ services:
   - type: web
     name: nextstep-ai-backend
     runtime: python
-    pythonVersion: 3.12.15
+    pythonVersion: 3.11.11
     rootDir: backend
 
     buildCommand: python -m pip install --upgrade pip setuptools wheel && pip install --prefer-binary -r requirements.txt

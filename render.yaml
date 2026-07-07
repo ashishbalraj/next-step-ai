@@ -5,6 +5,6 @@ services:
     pythonVersion: 3.12.15
     rootDir: backend
 
-    buildCommand: pip install --prefer-binary -r requirements.txt
+    buildCommand: python -m pip install --upgrade pip setuptools wheel && pip install --prefer-binary -r requirements.txt
 
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
